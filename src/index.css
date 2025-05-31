@@ -1,68 +1,105 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+/* Reset and box sizing */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;       /* Prevent horizontal scroll */
+  width: 100vw;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f7f7f7;
+  color: #333;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
-body {
-  margin: 0;
+/* Container layout */
+.app {
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  flex-direction: column;
   min-height: 100vh;
+  width: 100%;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.header {
+  background: #222;
+  color: white;
+  padding: 1rem 1rem;
+  text-align: center;
+  flex-shrink: 0;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.main-content {
+  flex: 1;
+  padding: 1rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Sections styling */
+.body-section,
+.about {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 100%;
+  width: 100%;
+  margin: 1rem auto;
+  text-align: center;
+  box-sizing: border-box;
+  word-wrap: break-word; /* prevent overflow from long words */
+}
+
+/* Responsive max width for medium+ screens */
+@media (min-width: 600px) {
+  .body-section,
+  .about {
+    max-width: 800px;
+    padding: 2rem 3rem;
+  }
+}
+
+.wip-text {
+  font-size: 1.2rem;
+  color: #ff8800;
+  margin-top: 1rem;
+}
+
+/* Button styling */
+.about button {
+  margin-top: 1.5rem;
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  font-size: 1rem;
+  max-width: 100%;
+  display: inline-block;
+  word-wrap: break-word;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.about button:hover {
+  background: #1ebd5f;
+}
+
+/* Make images and buttons flexible */
+img, button {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer {
+  background: #222;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  flex-shrink: 0;
 }
