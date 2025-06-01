@@ -11,7 +11,8 @@ import Layout from './layout.jsx';
 const cognitoAuthConfig = {
   authority: "https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_Ws3sZnr4l",
   client_id: "hlg4q9au1q962ieji881eerk1",
-  redirect_uri: "https://www.camlabs.in/admin",
+  redirect_uri: "https://www.camlabs.in/admin", // change while deploying lowde
+  // redirect_uri: "http://localhost:5173/admin",
   response_type: "code",
   scope: "email openid phone",
 };
