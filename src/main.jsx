@@ -9,12 +9,13 @@ import ProtectedRoute from './ProtectedRoute.jsx';
 import Layout from './layout.jsx';
 
 const cognitoAuthConfig = {
-  authority: "https://ap-south-1ws3sznr4l.auth.ap-south-1.amazoncognito.com",  // Your Hosted UI domain
+  authority: "https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_Ws3sZnr4l",
   client_id: "hlg4q9au1q962ieji881eerk1",
-  redirect_uri: "http://localhost:5173/admin",   // adjust to your dev or production URL
+  redirect_uri: "https://www.camlabs.in/admin",
   response_type: "code",
-  scope: "openid email phone profile",
+  scope: "email openid phone",
 };
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <AuthProvider {...cognitoAuthConfig}>
