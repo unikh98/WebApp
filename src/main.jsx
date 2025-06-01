@@ -9,7 +9,7 @@ import ProtectedRoute from './ProtectedRoute.jsx';
 import Layout from './layout.jsx';
 
 const cognitoAuthConfig = {
-  authority: "https://ap-south-1ws3sznr4l.auth.ap-south-1.amazoncognito.com",
+  authority: "https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_Ws3sZnr4l",
   client_id: "hlg4q9au1q962ieji881eerk1",
   redirect_uri: "https://www.camlabs.in/admin", 
   response_type: "code",
