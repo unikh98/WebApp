@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './App.css';
+import WhatsAppFloatingButton from './WhatsAppFloatingButton';
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaLinkedinIn, FaPinterestP, FaTiktok } from 'react-icons/fa';
 
 function App() {
   const [data, setData] = useState({ categories: [], products: [] });
@@ -69,11 +71,14 @@ function App() {
   const filteredProducts = data.products.filter(p => p.category === selectedCategory);
 
   return (
+    
     <main className="main-content">
+      <WhatsAppFloatingButton />
       <section className="categories-section">
-        <h2>Categories</h2>
+        <h2 className="categories-title">Rent It. Shoot It. Love It.</h2>
+        
         <div className="scroll-wrapper">
-          <div className="scroll-fade-left" />
+          <div className="scroll-fade scroll-fade-left" />
           <div
             className="category-scroll"
             ref={categoryScrollRef}
@@ -92,10 +97,11 @@ function App() {
               </button>
             ))}
           </div>
-
-          <div className="scroll-fade-right" />
+          <div className="scroll-fade scroll-fade-right" />
         </div>
       </section>
+
+
 
 
       <section className="products-section">
@@ -115,19 +121,19 @@ function App() {
               <h3>{prod.name}</h3>
               <p>{prod.description}</p>
               <div className="price-block">
-                  <>
-                    <div className="price-line">
-                      <span className="old-price">₹{prod.price}</span>
-                      <span className="new-price">₹{prod.offerPrice}</span>
-                    </div>
-                    <span className="discount-tag">
-                      {prod.price > 0
-                        ? `${Math.round(((+prod.price - +prod.offerPrice) / +prod.price) * 100)}% OFF`
-                        : ''}
+                <>
+                  <div className="price-line">
+                    <span className="old-price">₹{prod.price}</span>
+                    <span className="new-price">₹{prod.offerPrice}</span>
+                  </div>
+                  <span className="discount-tag">
+                    {prod.price > 0
+                      ? `${Math.round(((+prod.price - +prod.offerPrice) / +prod.price) * 100)}% OFF`
+                      : ''}
 
-                    </span>
-                  </>
-               
+                  </span>
+                </>
+
               </div>
               <a
                 className="book-now-btn"

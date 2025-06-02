@@ -314,3 +314,88 @@ h2::after {
 .whatsapp-icon {
   font-size: 1.1rem;
 }
+
+.categories-section {
+  padding: 3rem 1rem;
+  background-color: #f9fafb;
+  position: relative;
+  text-align: center;
+}
+
+.categories-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+}
+
+.scroll-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.category-scroll {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 2rem;
+  scroll-behavior: smooth;
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
+}
+
+.category-scroll:active {
+  cursor: grabbing;
+}
+
+.category-tile-app {
+  padding: 0.6rem 1.5rem;
+  border: none;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+  transition: background 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category-tile-app:hover {
+  background-color: #d1d5db;
+  transform: scale(1.05);
+}
+
+.category-tile-app.selected {
+  background-color: #2563eb;
+  color: white;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.4);
+}
+
+.scroll-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.scroll-fade-left {
+  left: 0;
+  background: linear-gradient(to right, #f9fafb, rgba(249, 250, 251, 0));
+}
+
+.scroll-fade-right {
+  right: 0;
+  background: linear-gradient(to left, #f9fafb, rgba(249, 250, 251, 0));
+}
+
+/* Optional: smooth scrollbars for desktop */
+.category-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.category-scroll::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
