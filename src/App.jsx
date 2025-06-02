@@ -85,7 +85,7 @@ function App() {
             {data.categories.map(cat => (
               <button
                 key={cat}
-                className={`category-tile ${selectedCategory === cat ? 'selected' : ''}`}
+                className={`category-tile-app ${selectedCategory === cat ? 'selected' : ''}`}
                 onClick={() => setSelectedCategory(cat)}
               >
                 {cat}

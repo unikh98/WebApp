@@ -118,7 +118,7 @@
   user-select: none;
 }
 
-.category-tile {
+.category-tile-app {
   flex: 0 0 auto;
   padding: 0.5rem 1rem;
   border: none;
@@ -130,11 +130,11 @@
   white-space: nowrap;
 }
 
-.category-tile:hover {
+.category-tile-app:hover {
   background-color: #ddd;
 }
 
-.category-tile.selected {
+.category-tile-app.selected {
   background-color: #007bff;
   color: white;
 }
