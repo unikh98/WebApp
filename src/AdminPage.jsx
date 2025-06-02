@@ -237,10 +237,6 @@ function AdminPage() {
                       />
                       <label htmlFor={`name-${prod.id}`} className="outlined-label">Name</label>
                     </div>
-
-
-
-
                     <small
                       style={{
                         wordBreak: 'break-word',
@@ -250,8 +246,7 @@ function AdminPage() {
                         display: 'block',
                         maxWidth: '100%',
                         color: '#888',
-                      }}
-                    >
+                      }}>
                       {prod.image}
                     </small>
 
@@ -272,15 +267,34 @@ function AdminPage() {
                       </label>
                       {uploading[data.products[globalIndex].id] && <div className="spinner"></div>}
                     </div>
-
-
-                    {/* {prod.image && <img src={prod.image} alt="Preview" className="image-preview" />} */}
                     <textarea
                       placeholder="Description"
                       value={prod.description}
                       onChange={e => handleProductChange(globalIndex, 'description', e.target.value)}
                       className="admin-textarea"
                     />
+                    <div className="outlined-input-group">
+                      <input
+                        type="number"
+                        placeholder="Actual Price"
+                        id={`price-${prod.id}`}
+                        value={prod.price}
+                        onChange={e => handleProductChange(globalIndex, 'price', e.target.value)}
+                        className="outlined-input"
+                      />
+                      <label htmlFor={`price-${prod.id}`} className="outlined-label">Actual Price</label>
+                    </div>
+                    <div className="outlined-input-group">
+                      <input
+                        type="number"
+                        placeholder="Offer Price"
+                        id={`offerPrice-${prod.id}`}
+                        value={prod.offerPrice}
+                        onChange={e => handleProductChange(globalIndex, 'offerPrice', e.target.value)}
+                        className="outlined-input"
+                      />
+                      <label htmlFor={`offerPrice-${prod.id}`} className="outlined-label">Offer Price</label>
+                    </div>
                     <button className="btn remove-btn" onClick={() => removeProduct(globalIndex)}>Remove Product</button>
                   </div>
                 );

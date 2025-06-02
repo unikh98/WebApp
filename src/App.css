@@ -242,3 +242,75 @@ h2::after {
   animation: pulseFade 1.5s ease-in-out infinite;
   border: 2px dashed #ccc;
 }
+
+.price-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: 8px;
+  padding: 10px 0;
+  background: linear-gradient(135deg, #f5faff, #eef6fd);
+  border-top: 1px solid #dbe9f4;
+  border-radius: 0 0 8px 8px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.price-line {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.new-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #28a745;
+}
+
+.discount-tag {
+  margin-top: 4px;
+  background-color: #ffe0b2;
+  color: #e67e22;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.book-now-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto;
+}
+
+.book-now-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  background: linear-gradient(135deg, #1ebe5d, #075e54);
+}
+
+.whatsapp-icon {
+  font-size: 1.1rem;
+}

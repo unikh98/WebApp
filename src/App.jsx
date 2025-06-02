@@ -107,13 +107,38 @@ function App() {
               <h3>Products are being added</h3>
               <p>Please wait...</p>
             </div>
-          ):(filteredProducts.map(prod => (
+          ) : (filteredProducts.map(prod => (
             <div key={prod.id} className="product-card">
               <img src={prod.image || '/No_Image_Available.jpg'}
                 alt={prod.name}
                 onError={(e) => { e.target.onerror = null; e.target.src = '/No_Image_Available.jpg'; }} />
               <h3>{prod.name}</h3>
               <p>{prod.description}</p>
+              <div className="price-block">
+                  <>
+                    <div className="price-line">
+                      <span className="old-price">₹{prod.price}</span>
+                      <span className="new-price">₹{prod.offerPrice}</span>
+                    </div>
+                    <span className="discount-tag">
+                      {prod.price > 0
+                        ? `${Math.round(((+prod.price - +prod.offerPrice) / +prod.price) * 100)}% OFF`
+                        : ''}
+
+                    </span>
+                  </>
+               
+              </div>
+              <a
+                className="book-now-btn"
+                href={`https://wa.me/919972706169?text=${encodeURIComponent(
+                  `Hi, I'm interested in "${prod.name}" priced at ₹${prod.offerPrice || prod.price}`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="whatsapp-icon"></span> Book Now
+              </a>
             </div>
           )))}
         </div>
