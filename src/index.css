@@ -89,17 +89,12 @@ html, body {
   background: #1ebd5f;
 }
 
-/* Make images and buttons flexible */
-img, button {
-  max-width: 100%;
-  height: auto;
-  display: block;
+.category-scroll.dragging {
+  cursor: grabbing;
+  user-select: none;
+  scroll-behavior: auto !important; /* disable smooth scroll while dragging */
 }
 
-.footer {
-  background: #222;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-  flex-shrink: 0;
+.category-scroll {
+  cursor: grab;
 }

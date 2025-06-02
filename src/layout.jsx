@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './App.css';
+import './layout.css';
 
 function Layout({ children, title }) {
   useEffect(() => {
@@ -20,7 +20,7 @@ function Layout({ children, title }) {
 
       {/* Footer */}
       <footer className="footer">
-        <p>© 2025 CamLabs</p>
+        <p>©2025 CamLabs</p>
       </footer>
     </div>
   );
