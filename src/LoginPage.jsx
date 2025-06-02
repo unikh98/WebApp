@@ -15,7 +15,7 @@ function LoginPage() {
   return (
     <div style={styles.outerContainer}>
       <div style={styles.container}>
-        <h2 style={styles.title}>ಜಿಂಗೆ ಚಕಾ ಜಿಂಗೆ ಚಕಾ ತನನಂ ತುವಿ ತುವಿ</h2>
+        <h2 style={styles.title}>Sign In</h2>
         <button style={styles.button} onClick={() => auth.signinRedirect()}>
           Sign in with AWS
         </button>
