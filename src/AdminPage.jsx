@@ -28,8 +28,7 @@ function AdminPage() {
       method: 'POST',
       headers: {
         "Content-Type": "application/json",
-        // 'Authorization': '${auth.user.access_token}'
-        "Authorization": "eyJraWQiOiIrUktlZ01RQ1JZN0VpZkNIYVlFWVpSSzh5R2RaTDRWUlpBMnRORWdLTDVjPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI1MTczN2Q0YS0xMDUxLTcwYzItNGY5MC1jMmFkZDU2NGE5MTMiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuYXAtc291dGgtMS5hbWF6b25hd3MuY29tXC9hcC1zb3V0aC0xX1dzM3NabnI0bCIsInZlcnNpb24iOjIsImNsaWVudF9pZCI6ImhsZzRxOWF1MXE5NjJpZWppODgxZWVyazEiLCJvcmlnaW5fanRpIjoiMWI0NWQ4OTUtMzZlMS00MWNmLTk1ODctMWYzNmI0OGJjYzg2IiwiZXZlbnRfaWQiOiI4MTg2NTQzNy00NzQwLTQ1MGYtYTViNi1mMjc4YzBjZTU4NzMiLCJ0b2tlbl91c2UiOiJhY2Nlc3MiLCJzY29wZSI6InBob25lIG9wZW5pZCBlbWFpbCIsImF1dGhfdGltZSI6MTc0ODg0MjkwMywiZXhwIjoxNzQ4ODQ2NTAzLCJpYXQiOjE3NDg4NDI5MDMsImp0aSI6ImU0ZjlkNDMyLTcyZTUtNDY2OS05YzNmLTYxZTcyNGRiYzU4NyIsInVzZXJuYW1lIjoiNTE3MzdkNGEtMTA1MS03MGMyLTRmOTAtYzJhZGQ1NjRhOTEzIn0.T2gv3V4SqYti4gdbnjCYe0TiHQ_ypCnB5ZjCk4HYg27HrTdX-R_CfoX9UON11ZPVJRbawwoAYeZ_ClQL0Eb1gK_OmT4SxC8ZN94MGLMHaaHJyau2S3GL0upwCGtjHwcAUyW_BxvWCsBiM6pWQfHvvupjmPZGYZdNwwwH2BK0YuSxa2wUF4dVYIZkT863XzY2aEf2W7WzDdC1B74ccFoaeaeNxk_AnB4Szy87xSUtOYiWaXahgq4WbUUsU1C6EKWT-KovwHSm2q0Geonjz9kW5uBcZF9kqPweOqLtTnnct4NI7UGTFdwXQ-UsqYBYprtVtfco0FmBGL1xQHocY5DztA"
+        'Authorization': 'Bearer ${auth.user.access_token}'
       },
       body: JSON.stringify(data)
     })
