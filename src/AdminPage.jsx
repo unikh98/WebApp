@@ -28,7 +28,8 @@ function AdminPage() {
       method: 'POST',
       headers: {
         "Content-Type": "application/json",
-        'Authorization': 'Bearer ${auth.user.access_token}'
+        // 'Authorization': '${auth.user.access_token}'
+        "Authorization": "Bearer ${auth.user.access_token}"
       },
       body: JSON.stringify(data)
     })
