@@ -28,8 +28,7 @@ function AdminPage() {
       method: 'POST',
       headers: {
         "Content-Type": "application/json",
-        // 'Authorization': '${auth.user.access_token}'
-        "Authorization": "Bearer ${auth.user.access_token}"
+        "Authorization": `Bearer ${auth.user.access_token}`  // <-- use backticks here
       },
       body: JSON.stringify(data)
     })
@@ -39,6 +38,7 @@ function AdminPage() {
       })
       .catch(err => alert(err.message));
   };
+  console.log("Token:", auth.user.access_token);
 
   const handleCategoryChange = (index, value) => {
     const newCategories = [...data.categories];
